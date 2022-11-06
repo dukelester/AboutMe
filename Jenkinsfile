@@ -3,9 +3,20 @@ pipeline {
   stages {
     stage('test') {
       steps {
-        echo 'welcome'
+        echo 'welcome to my testing section'
+      }
+    }
+    stage('build'){
+      steps{
+        'We are building now'
       }
     }
 
+  }
+  post{
+    always{
+      echo 'I will always test and build here'
+    }
+    
   }
 }
